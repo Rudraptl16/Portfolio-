@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import MagneticButton from './ui/MagneticButton';
 import { SparkleStar } from './ui/SectionHeading';
+import { copyToClipboard } from '../utils/copyProtection';
 
 // Framer Motion staggered orchestration variants
 const containerVariants = {
@@ -44,23 +45,31 @@ export default function Contact({ isPage = false }) {
   const HeadingTag = isPage ? motion.h1 : motion.h2;
 
   // Copy Email to Clipboard
-  const handleCopyEmail = (e) => {
+  const handleCopyEmail = async (e) => {
     e.stopPropagation();
     e.preventDefault();
-    navigator.clipboard.writeText('patelrudra99098@gmail.com');
-    setCopiedEmail(true);
-    toast.success('Email copied to clipboard!');
-    setTimeout(() => setCopiedEmail(false), 2200);
+    const success = await copyToClipboard('patelrudra99098@gmail.com');
+    if (success) {
+      setCopiedEmail(true);
+      toast.success('Email copied to clipboard!');
+      setTimeout(() => setCopiedEmail(false), 2200);
+    } else {
+      toast.error('Failed to copy email.');
+    }
   };
 
   // Copy Phone to Clipboard
-  const handleCopyPhone = (e) => {
+  const handleCopyPhone = async (e) => {
     e.stopPropagation();
     e.preventDefault();
-    navigator.clipboard.writeText('+916354825621');
-    setCopiedPhone(true);
-    toast.success('Phone number copied to clipboard!');
-    setTimeout(() => setCopiedPhone(false), 2200);
+    const success = await copyToClipboard('+916354825621');
+    if (success) {
+      setCopiedPhone(true);
+      toast.success('Phone number copied to clipboard!');
+      setTimeout(() => setCopiedPhone(false), 2200);
+    } else {
+      toast.error('Failed to copy phone number.');
+    }
   };
 
   const submitForm = async (e) => {
@@ -193,6 +202,10 @@ export default function Contact({ isPage = false }) {
                   </div>
                 </a>
                 <button
+                  type="button"
+                  data-copy-allowed="true"
+                  data-copy-email="true"
+                  aria-label="Copy Email Address"
                   onClick={handleCopyEmail}
                   className="p-2 sm:p-2.5 rounded-xl bg-dark-textMain/5 border border-dark-border hover:bg-dark-textMain/10 text-dark-textMuted hover:text-dark-textMain transition-all shrink-0 ml-2 cursor-pointer"
                   title="Copy Email"
@@ -223,6 +236,10 @@ export default function Contact({ isPage = false }) {
                   </div>
                 </a>
                 <button
+                  type="button"
+                  data-copy-allowed="true"
+                  data-copy-phone="true"
+                  aria-label="Copy Phone Number"
                   onClick={handleCopyPhone}
                   className="p-2 sm:p-2.5 rounded-xl bg-dark-textMain/5 border border-dark-border hover:bg-dark-textMain/10 text-dark-textMuted hover:text-dark-textMain transition-all shrink-0 ml-2 cursor-pointer"
                   title="Copy Phone Number"

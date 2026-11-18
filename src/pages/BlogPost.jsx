@@ -4,6 +4,8 @@ import SEO from '../components/SEO';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { blogposts as fallbackBlogs } from '../data/blogposts';
 import { ArrowLeft, Clock, Tag, Calendar, Twitter, Linkedin, Link as LinkIcon, User } from 'lucide-react';
+import toast from 'react-hot-toast';
+import { copyToClipboard } from '../utils/copyProtection';
 
 const SectionLabel = ({ icon: IconComponent, label, color = "text-dark-primary" }) => (
   <div className={`flex items-center gap-1 ${color}`}>
@@ -286,8 +288,19 @@ export default function BlogPost() {
                   <Linkedin size={18} />
                 </button>
                 <button
-                  onClick={() => navigator.clipboard.writeText(window.location.href)}
-                  className="w-10 h-10 rounded-full bg-dark-textMain/5 flex items-center justify-center text-dark-textMain/60 hover:text-dark-primary hover:bg-dark-primary/10 transition-all border border-dark-textMain/5 hover:border-dark-primary/30"
+                  type="button"
+                  data-copy-allowed="true"
+                  aria-label="Copy Article Link"
+                  title="Copy link to clipboard"
+                  onClick={async () => {
+                    const success = await copyToClipboard(window.location.href);
+                    if (success) {
+                      toast.success('Article link copied to clipboard!');
+                    } else {
+                      toast.error('Failed to copy link.');
+                    }
+                  }}
+                  className="w-10 h-10 rounded-full bg-dark-textMain/5 flex items-center justify-center text-dark-textMain/60 hover:text-dark-primary hover:bg-dark-primary/10 transition-all border border-dark-textMain/5 hover:border-dark-primary/30 cursor-pointer"
                 >
                   <LinkIcon size={18} />
                 </button>

@@ -154,6 +154,59 @@
     -ms-user-select: none;
   }
 
+  /* Exception: Form controls & explicit data-copy-allowed elements restore selection */
+  input,
+  textarea,
+  select,
+  [contenteditable="true"],
+  [data-copy-allowed="true"],
+  [data-copy-allowed="true"] * {
+    user-select: text !important;
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+  }
+
+  /* Disable casual image dragging & mobile touch-callout */
+  img,
+  picture,
+  video {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+  }
+
+  /* Hide selection highlight on general protected content */
+  ::selection {
+    background: transparent;
+    color: inherit;
+  }
+
+  ::-moz-selection {
+    background: transparent;
+    color: inherit;
+  }
+
+  /* Visible selection highlight in inputs and authorized copy areas */
+  input::selection,
+  textarea::selection,
+  [data-copy-allowed="true"]::selection,
+  [data-copy-allowed="true"] *::selection {
+    background: rgba(99, 102, 241, 0.35);
+    color: inherit;
+  }
+
+  input::-moz-selection,
+  textarea::-moz-selection,
+  [data-copy-allowed="true"]::-moz-selection,
+  [data-copy-allowed="true"] *::-moz-selection {
+    background: rgba(99, 102, 241, 0.35);
+    color: inherit;
+  }
+
   body::before {
     content: '';
     position: fixed;

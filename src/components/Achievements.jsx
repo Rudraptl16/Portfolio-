@@ -6,6 +6,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import MagneticButton from './ui/MagneticButton';
 import GridBackground from './ui/GridBackground';
 import SectionHeading from './ui/SectionHeading';
+import { copyToClipboard } from '../utils/copyProtection';
 
 // Custom Premium SVG Icons for Tech Brands
 const AWSIcon = () => (
@@ -344,11 +345,16 @@ export default function Achievements() {
   const [copiedHash, setCopiedHash] = useState(false);
   const [galleryIndex, setGalleryIndex] = useState(0);
 
-  const handleCopyHash = (hash) => {
-    navigator.clipboard.writeText(hash);
-    setCopiedHash(true);
-    toast.success('Verification hash copied to clipboard!');
-    setTimeout(() => setCopiedHash(false), 2000);
+  const handleCopyHash = async (hash) => {
+    if (!hash) return;
+    const success = await copyToClipboard(hash);
+    if (success) {
+      setCopiedHash(true);
+      toast.success('Verification hash copied to clipboard!');
+      setTimeout(() => setCopiedHash(false), 2000);
+    } else {
+      toast.error('Failed to copy verification hash.');
+    }
   };
 
   const handleZoomIn = () => setZoomScale(prev => Math.min(prev + 0.25, 2));
@@ -530,6 +536,9 @@ export default function Achievements() {
                     <div className="border-t border-dark-border/20 pt-4">
                       <span className="text-[9px] font-code text-dark-textMuted uppercase block mb-1">Cryptographic Checksum</span>
                       <button
+                        type="button"
+                        data-copy-allowed="true"
+                        aria-label="Copy Verification Hash"
                         onClick={() => handleCopyHash(selectedCert.verificationHash)}
                         style={{ color: selectedCert.brandColor, borderColor: `${selectedCert.brandColor}20` }}
                         className="w-full text-[10px] font-mono text-left hover:text-dark-textMain bg-dark-bg/40 hover:bg-dark-bg/80 border px-3.5 py-2.5 rounded-lg flex items-center justify-between group transition-all duration-300 cursor-pointer"
