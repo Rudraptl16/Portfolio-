@@ -111,38 +111,38 @@ export const projects = [
   },
   {
     id: 4,
-    title: 'SwiftTask',
-    subtitle: 'Native iOS Task & Productivity Manager in SwiftUI 6',
-    description: 'SwiftTask is a high-performance native iOS application engineered for daily task management and habit tracking. Built using SwiftUI 6, Swift 6, and SwiftData, it features native frosted glass UI components, adaptive Light/Dark mode themes, interactive Lock Screen widgets via WidgetKit, custom haptic engine feedback, and instant iCloud sync.',
+    title: 'TaskFlow Pro',
+    subtitle: 'Full-Stack Task & Productivity Platform in React, Node.js & REST APIs',
+    description: 'TaskFlow Pro is a high-performance full-stack web application engineered for daily task management, team workflows, and habit tracking. Built with React, Tailwind CSS, and a Node.js/Express REST backend, it features real-time state synchronization, adaptive themes, JWT authentication, and persistent cloud storage.',
     image: '/project img/iOS Todo-app.webp',
-    role: 'Native iOS Engineer',
+    role: 'Full Stack Engineer',
     year: '2025',
-    platform: 'iOS 18 + SwiftUI 6',
-    performance: '60 FPS Native SwiftData',
+    platform: 'Full-Stack Web (React + Node.js)',
+    performance: '99/100 Lighthouse & Sub-80ms API',
     tags: [
-      "iOS 18",
-      "SwiftUI 6",
-      "Swift 6",
-      "SwiftData",
-      "WidgetKit",
-      "Mobile App"
+      "Full Stack",
+      "React",
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "Productivity"
     ],
     skillsUsed: [
-      "Swift 6",
-      "SwiftUI",
-      "SwiftData Persistence",
-      "WidgetKit Integration",
-      "Haptic Engine API",
-      "Combine Framework"
+      "React.js",
+      "Node.js & Express",
+      "RESTful API Design",
+      "JWT Authentication",
+      "Tailwind CSS",
+      "MongoDB / Cloud DB"
     ],
     keyFeatures: [
-      "Native iOS 18 fluid UI with interactive frosted glass aesthetics",
-      "SwiftData local persistence with automatic iCloud synchronisation",
-      "Interactive Home Screen & Lock Screen WidgetKit widgets",
-      "Custom drag-to-reorder tasks and swipe-to-complete gestures"
+      "Full-stack CRUD task & workflow management with RESTful endpoints",
+      "JWT-based secure authentication and protected route pipelines",
+      "Optimized database queries with local caching and optimistic UI updates",
+      "Responsive dark/light interface with drag-and-drop task prioritization"
     ],
     status: 'Completed',
-    category: 'Mobile Apps',
+    category: 'Full-Stack',
     liveUrl: 'https://furniqlo-store-gmtf.vercel.app/',
     githubUrl: 'https://github.com/Rudraptl16/Furniqlo-Store',
     caseStudyId: 4,
@@ -412,4 +412,4 @@ export const projects = [
   }
 ];
 
-export const projectFilters = ['All', 'Web Apps', 'Mobile Apps', 'UI/UX Design'];
+export const projectFilters = ['All', 'Web Apps', 'Full-Stack', 'UI/UX Design'];

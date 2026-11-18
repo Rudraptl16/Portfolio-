@@ -49,11 +49,6 @@ const slideLeft = {
   show: { opacity: 1, x: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
 };
 
-const revealBar = {
-  hidden: { scaleX: 0, originX: 0 },
-  show: { scaleX: 1, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.08 } },
-};
-
 const shimmerBullet = {
   hidden: { opacity: 0, x: -14, filter: 'blur(4px)' },
   show: {
@@ -115,7 +110,7 @@ function ServiceCard({ service, index, onClick }) {
       <div className="flex items-center justify-between gap-3 mb-5">
         <div className="flex items-center gap-2">
           {service.badge && (
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-mono font-bold tracking-wider uppercase bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-200/90 dark:border-indigo-500/20 text-indigo-700 dark:text-indigo-300 shadow-sm dark:shadow-none">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-mono font-bold tracking-wider uppercase bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-200/90 dark:border-indigo-500/20 text-indigo-700 dark:text-indigo-500 shadow-sm dark:shadow-none">
               <Sparkles size={11} className="text-indigo-600 dark:text-indigo-400" />
               {service.badge}
             </span>
@@ -130,7 +125,7 @@ function ServiceCard({ service, index, onClick }) {
       <div className="flex-1">
         {/* Icon with orbit ring */}
         <div className="relative w-fit mb-4">
-          <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-200/90 dark:border-indigo-500/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400 shadow-sm group-hover:bg-indigo-600 group-hover:text-white dark:group-hover:bg-indigo-500/20 dark:group-hover:text-indigo-300 group-hover:scale-110 group-hover:shadow-[0_4px_20px_rgba(99,102,241,0.35)] transition-all duration-400">
+          <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-2xl bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-200/90 dark:border-indigo-500/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400 shadow-sm group-hover:bg-indigo-600 group-hover:text-white dark:group-hover:bg-indigo-500/20 dark:group-hover:text-indigo-500 group-hover:scale-110 group-hover:shadow-[0_4px_20px_rgba(99,102,241,0.35)] transition-all duration-400">
             <service.icon size={22} strokeWidth={2.2} />
           </div>
           <span className="absolute inset-0 rounded-2xl border border-indigo-500/30 dark:border-indigo-400/20 opacity-0 group-hover:opacity-100 group-hover:scale-[1.4] transition-all duration-700 pointer-events-none" />
@@ -551,7 +546,7 @@ export default function Services() {
           prefix="Solving "
           highlight="Complex"
           suffix=" Problems with Code"
-          description="End-to-end digital craftsmanship — from pixel-perfect interfaces to resilient cloud-connected native iOS and web systems."
+          description="End-to-end digital craftsmanship — from pixel-perfect frontend interfaces to resilient cloud-connected full-stack and backend systems."
           size="medium"
         />
 

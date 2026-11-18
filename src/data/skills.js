@@ -10,25 +10,22 @@ export const skills = [
       { name: 'Tailwind CSS', icon: 'tailwindcss', proficiency: 94, projectsCount: 10 }
     ]
   },
-  /*
   {
     category: 'Backend',
     technologies: [
-      { name: 'Node.js', icon: 'nodejs', proficiency: 82, projectsCount: 6 },
-      { name: 'Express.js', icon: 'express', proficiency: 84, projectsCount: 6 },
-      { name: 'REST APIs', icon: 'api', proficiency: 88, projectsCount: 8 },
+      { name: 'Node.js', icon: 'nodejs', proficiency: 86, projectsCount: 8 },
+      { name: 'Express.js', icon: 'express', proficiency: 88, projectsCount: 8 },
+      { name: 'REST APIs', icon: 'api', proficiency: 90, projectsCount: 10 },
       { name: 'Java', icon: 'java', proficiency: 75, projectsCount: 3 }
     ]
   },
-  */
   {
-    category: 'Mobile',
+    category: 'Full Stack & APIs',
     technologies: [
-      { name: 'Swift', icon: 'swift', proficiency: 80, projectsCount: 4 },
-      { name: 'Storyboard', icon: 'storyboard', proficiency: 78, projectsCount: 3 },
-      { name: 'Mobile Design', icon: 'mobiledesign', proficiency: 85, projectsCount: 5 },
-      { name: 'UIKit', icon: 'uikit', proficiency: 75, projectsCount: 2 },
-      { name: 'MVVM', icon: 'mvvm', proficiency: 82, projectsCount: 4 }
+      { name: 'MERN Stack', icon: 'react', proficiency: 88, projectsCount: 8 },
+      { name: 'RESTful Architecture', icon: 'api', proficiency: 90, projectsCount: 10 },
+      { name: 'State Management', icon: 'react', proficiency: 86, projectsCount: 8 },
+      { name: 'Server-Side Rendering', icon: 'nextjs', proficiency: 85, projectsCount: 6 }
     ]
   },
   {
@@ -45,7 +42,6 @@ export const skills = [
       { name: 'Git', icon: 'git', proficiency: 90, projectsCount: 15 },
       { name: 'GitHub', icon: 'github', proficiency: 92, projectsCount: 15 },
       { name: 'VS Code', icon: 'vscode', proficiency: 95, projectsCount: 15 },
-      { name: 'Xcode', icon: 'xcode', proficiency: 88, projectsCount: 6 },
       { name: 'Firebase', icon: 'firebase', proficiency: 88, projectsCount: 7 },
       { name: 'Figma', icon: 'figma', proficiency: 85, projectsCount: 8 },
       { name: 'Postman', icon: 'postman', proficiency: 88, projectsCount: 10 }

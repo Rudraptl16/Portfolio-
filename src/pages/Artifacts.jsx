@@ -83,11 +83,9 @@ export default function Artifacts() {
       let matchesCategory = activeCategory === 'All';
       if (!matchesCategory) {
         if (target.includes('full-stack') || target.includes('fullstack')) {
-          matchesCategory = cat.includes('full-stack') || cat.includes('fullstack');
+          matchesCategory = cat.includes('full-stack') || cat.includes('fullstack') || cat.includes('backend');
         } else if (target.includes('web')) {
           matchesCategory = cat.includes('web') || cat.includes('react') || cat.includes('javascript') || cat.includes('html');
-        } else if (target.includes('mobile')) {
-          matchesCategory = cat.includes('mobile') || cat.includes('ios') || cat.includes('swift');
         } else if (target.includes('design')) {
           matchesCategory = cat.includes('design') || cat.includes('ui') || cat.includes('figma');
         } else {
@@ -155,8 +153,8 @@ export default function Artifacts() {
     <div className="min-h-screen bg-transparent text-dark-textMain pt-28 md:pt-36 pb-24 relative overflow-hidden">
       <SEO
         title="Featured Artifacts & Case Studies"
-        description="A curated digital vault of high-performance web products, native SwiftUI iOS applications, and technical case studies by Rudra Patel."
-        keywords="Rudra Patel projects, portfolio case studies, Frontend web apps, SwiftUI iOS apps, React projects, Web development portfolio"
+        description="A curated digital vault of high-performance web products, scalable full-stack applications, and technical case studies by Rudra Patel."
+        keywords="Rudra Patel projects, portfolio case studies, Frontend web apps, Full-Stack apps, React projects, Web development portfolio"
         canonical="https://patelrudra.in/artifacts"
         schema={artifactsSchema}
       />
@@ -249,9 +247,8 @@ export default function Artifacts() {
                     : projects.filter((p) => {
                       const c = (p.category || '').toLowerCase();
                       const t = cat.toLowerCase();
-                      if (t.includes('full-stack')) return c.includes('full-stack') || c.includes('fullstack');
+                      if (t.includes('full-stack')) return c.includes('full-stack') || c.includes('fullstack') || c.includes('backend');
                       if (t.includes('web')) return c.includes('web') || c.includes('react');
-                      if (t.includes('mobile')) return c.includes('mobile') || c.includes('ios');
                       if (t.includes('design')) return c.includes('design') || c.includes('ui');
                       return c === t;
                     }).length;

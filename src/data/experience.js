@@ -1,13 +1,13 @@
 export const experience = [
   {
     type: 'work',
-    role: "iOS Development Specialist",
-    company: "Apple Authorised Training Center [AATCe]",
-    duration: "July 2025 - Continued",
+    role: "Full Stack & Web Developer",
+    company: "Engineering Projects & Independent",
+    duration: "2024 - Present",
     points: [
-      "Building native iOS applications using Swift, SwiftUI, and UIKit within Xcode.",
-      "Structuring clean code architecture using MVVM and MVC design patterns for robust data flow.",
-      "Testing and optimizing app performance on physical iOS devices and Xcode Simulators."
+      "Engineering modern full-stack web applications with React.js, Next.js, Node.js, Express, and MongoDB.",
+      "Structuring clean code architecture using MVC, RESTful API design, and modular state management.",
+      "Developing high-throughput backend services, JWT authentication, and responsive Tailwind UI systems."
     ]
   },
   {

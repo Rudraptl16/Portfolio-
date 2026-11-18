@@ -149,24 +149,19 @@ const certifications = [
     skills: ['Process Management', 'Memory Allocation', 'Concurrency & Locks', 'Kernel Architecture']
   },
   {
-    id: 'ios-development-workshop',
-    title: 'iOS Development Workshop',
-    issuer: 'Apple / WWDC',
+    id: 'backend-web-workshop',
+    title: 'Modern Web Architecture & Backend Engineering',
+    issuer: 'Web Architecture Series',
     date: 'July 2025',
-    verificationId: 'iOS Dev Workshop',
-    verificationHash: 'SwiftUI & UIKit Track',
-    description: 'Hands-on workshop covering native iOS app development with Swift, SwiftUI layout system, UIKit fundamentals, Xcode toolchain, App Store publishing pipeline, and Apple Human Interface Guidelines.',
-    brandColor: '#007AFF',
-    iconName: 'ios',
-    imagePath: '/images/iOS Workshop 1.webp',
-    images: [
-      '/images/iOS Workshop 1.webp',
-      '/images/iOS Workshop 2.webp',
-      '/images/iOS Workshop 4.webp'
-    ],
+    verificationId: 'Full-Stack Track',
+    verificationHash: 'Node.js & React System',
+    description: 'Intensive engineering track covering full-stack web applications, scalable backend microservices, RESTful API design, database modeling with MongoDB, and modern React frontend architectures.',
+    brandColor: '#6366f1',
+    iconName: 'fullstack',
+    imagePath: '/certificate img/Sigma-Development.webp',
     pdfPath: '',
-    externalUrl: 'https://developer.apple.com/',
-    skills: ['Swift', 'SwiftUI', 'UIKit', 'Xcode', 'App Store Connect', 'HIG']
+    externalUrl: 'https://github.com/Rudraptl16',
+    skills: ['Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'React', 'System Design']
   }
 ];
 

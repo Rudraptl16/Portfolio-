@@ -283,7 +283,7 @@ export default function Navbar() {
 
               {/* Brand Text */}
               <div className="flex flex-col">
-                <span className="font-bricolage font-black text-lg md:text-xl text-dark-textMain tracking-tight leading-none group-hover:text-indigo-300 transition-colors duration-300">
+                <span className="font-bricolage font-black text-lg md:text-xl text-dark-textMain tracking-tight leading-none group-hover:text-indigo-500 transition-colors duration-300">
                   Rudra<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400 font-extrabold ml-0.5">.</span>
                 </span>
               </div>

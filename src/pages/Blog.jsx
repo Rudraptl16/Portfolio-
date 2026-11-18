@@ -87,8 +87,8 @@ export default function Blog() {
     <div className="min-h-screen bg-transparent text-dark-textMain pt-32 pb-20 relative overflow-hidden">
       <SEO
         title="Insights & Thoughts | Blog"
-        description="Deep dives into AI, Frontend web development, SwiftUI iOS apps, and modern UI/UX design principles by Rudra Patel."
-        keywords="Rudra Patel blog, software engineering articles, Frontend web development tutorials, React 19, Next.js, SwiftUI iOS, UI/UX design"
+        description="Deep dives into AI, Frontend web development, Node.js backend architectures, and modern UI/UX design principles by Rudra Patel."
+        keywords="Rudra Patel blog, software engineering articles, Frontend web development tutorials, React 19, Next.js, Node.js, Express, Full-Stack, UI/UX design"
         canonical="https://patelrudra.in/blog"
         schema={blogPageSchema}
       />
@@ -108,7 +108,7 @@ export default function Blog() {
           prefix="Curated "
           highlight="Knowledge"
           suffix=" & Engineering Logs"
-          description="Architectural deep dives, engineering retrospectives, and modern frontend & iOS implementation strategies."
+          description="Architectural deep dives, engineering retrospectives, and modern frontend & full-stack implementation strategies."
           rightContent={
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}

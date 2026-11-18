@@ -105,7 +105,7 @@ export default function CaseStudy() {
     "creator": {
       "@type": "Person",
       "name": "Rudra Patel",
-      "jobTitle": "Digital Architect, Frontend & iOS Developer",
+      "jobTitle": "Full Stack Developer (Frontend & Backend)",
       "url": "https://patelrudra.in"
     },
     "genre": study.category,

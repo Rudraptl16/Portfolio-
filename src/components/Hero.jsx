@@ -163,7 +163,7 @@ export default function Hero() {
 
       {/* Screen-reader optimized SEO support */}
       <p className="sr-only">
-        Welcome to the official portfolio of Rudra Patel, an expert Frontend & Native iOS Developer based in Vadodara, Gujarat, India. Specializing in high-performance Swift, SwiftUI iOS apps, React web solutions, Next.js applications, and Tailwind CSS user interfaces.
+        Welcome to the official portfolio of Rudra Patel, a Full Stack Developer (Frontend & Backend) based in Vadodara, Gujarat, India. Specializing in high-performance React web solutions, Next.js applications, Node.js and Express RESTful APIs, MongoDB, and Tailwind CSS user interfaces.
       </p>
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center pt-20 lg:pt-12">
@@ -231,10 +231,11 @@ export default function Hero() {
           <motion.div variants={itemVariants} className="min-h-[36px] flex items-center justify-center lg:justify-start">
             <TypeAnimation
               sequence={[
+                'Full Stack Developer', 2800,
                 'Frontend Developer', 2800,
-                'iOS Developer', 2800,
-                'SwiftUI Developer', 2800,
-                'React & Next.js Developer', 2800,
+                'Backend Developer', 2800,
+                'React & Next.js Engineer', 2800,
+                'Node.js & Express Architect', 2800,
                 'UI/UX-Focused Developer', 2800,
                 'Problem Solver & Avid Learner', 2800
               ]}
@@ -250,7 +251,7 @@ export default function Hero() {
             variants={itemVariants}
             className="font-display text-dark-textMain/75 text-base sm:text-lg max-w-xl leading-relaxed tracking-normal"
           >
-            I'm a <strong className="text-dark-textMain font-semibold">Frontend & Native iOS Developer</strong> based in <span className="text-indigo-600 dark:text-indigo-400 font-semibold">Vadodara, Gujarat</span>. I engineer high-performance mobile apps with <span className="text-purple-400 dark:text-purple-500 font-semibold">SwiftUI</span> and responsive web platforms using <span className="text-indigo-500 dark:text-indigo-500 font-semibold">React & Next.js</span> — focused on speed optimization and clean architecture.
+            I'm a <strong className="text-dark-textMain font-semibold">Full Stack Developer</strong> (Frontend & Backend) based in <span className="text-indigo-600 dark:text-indigo-400 font-semibold">Vadodara, Gujarat</span>. I engineer high-performance web platforms using <span className="text-indigo-500 font-semibold">React & Next.js</span> on the frontend and scalable services with <span className="text-purple-500 font-semibold">Node.js, Express & MongoDB</span> on the backend — dedicated to speed optimization and clean architecture.
           </motion.p>
 
           {/* Action CTAs */}
@@ -315,7 +316,7 @@ export default function Hero() {
             <div className="relative w-[280px] sm:w-[320px] md:w-[360px] lg:w-[400px] max-w-[calc(100vw-3rem)] aspect-[3/4] rounded-2xl overflow-hidden border border-dark-textMain/15 bg-dark-bg/40 backdrop-blur-md shadow-2xl">
               <img
                 src="/images/DSC06139.webp"
-                alt="Rudra Patel - Frontend & iOS Developer portrait"
+                alt="Rudra Patel - Full Stack Developer portrait"
                 fetchPriority="high"
                 decoding="async"
                 width="400"

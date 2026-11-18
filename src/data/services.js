@@ -1,4 +1,4 @@
-import { Laptop, Smartphone, Palette, Layers, Zap, Cloud } from 'lucide-react';
+import { Laptop, Server, Palette, Layers, Zap, Cloud } from 'lucide-react';
 
 export const services = [
   {
@@ -37,38 +37,38 @@ export const services = [
     idealFor: 'SaaS Platforms, High-Growth Startups, Digital Portfolios, E-Commerce Brands'
   },
   {
-    id: 'ios',
-    title: 'Native iOS App Development',
-    tagline: 'Refined, high-performance mobile experiences crafted natively for Apple platforms.',
-    badge: 'Apple HIG Native',
-    description: 'Building elegant, ultra-smooth native iOS mobile applications using Swift and SwiftUI, closely following Apple Human Interface Guidelines for premium tactile polish.',
-    icon: Smartphone,
+    id: 'backend',
+    title: 'Backend & RESTful API Architecture',
+    tagline: 'High-throughput, secure, and maintainable server engines powering modern web products.',
+    badge: 'Scalable Architecture',
+    description: 'Engineering robust backend architectures, RESTful APIs, microservices, and database systems using Node.js, Express, and MongoDB, complete with JWT security and clean data modeling.',
+    icon: Server,
     features: [
-      'Native SwiftUI & Modern Swift Concurrency (async/await)',
-      'Strict Apple Human Interface Guidelines (HIG) Adherence',
-      'Silky 60-120fps Gesture Controls & Haptic Feedback',
-      'CoreData / SwiftData Local Storage & Offline-First Caching',
-      'App Store Connect, TestFlight & Submission Readiness'
+      'RESTful API Engineering & End-to-End Route Architecture',
+      'MongoDB & Mongoose Schema Modeling, Indexing & Aggregation',
+      'JWT Authentication, Secure Cookies, Bcrypt & Role-Based Access',
+      'Centralized Error-Handling Middleware & Input Sanitization',
+      'Clean MVC Architecture & Controller-Service Decoupling'
     ],
     keyBenefits: [
-      'True native iOS responsiveness that feels intuitive to Apple users',
-      'Optimal memory, CPU, and battery conservation on all iPhones',
-      'Seamless Apple ecosystem integration (Widgets, Dark Mode, SF Symbols)'
+      'Sub-50ms API response latency that powers instant frontend transitions',
+      'Hardened backend security with token expiration and sanitized payloads',
+      'Modular, extensible codebase designed to easily scale with user traffic'
     ],
     deliverables: [
-      'Full Xcode project with modular Swift architecture',
-      'Interactive TestFlight beta build for client testing',
-      'App Store assets, metadata prep & submission assistance',
-      'Offline-capable caching and secure keychain storage'
+      'Production-ready Node.js & Express server codebase repository',
+      'Optimized MongoDB schema designs with production indexing',
+      'Structured Postman / REST API documentation with sample payloads',
+      'Environment variable configurations and automated cloud deployment'
     ],
     workflow: [
-      { step: '01', title: 'Spec & HIG Review', desc: 'Wireframe iOS navigation patterns following Apple HIG standards.' },
-      { step: '02', title: 'SwiftUI Views', desc: 'Build declarative views, adaptive sheets, and SF Symbol typography.' },
-      { step: '03', title: 'Data & Services', desc: 'Connect REST/Firebase backend, SwiftData persistence, and auth.' },
-      { step: '04', title: 'QA & TestFlight', desc: 'Profile in Instruments, test on physical devices, and deploy beta.' }
+      { step: '01', title: 'Data & Schema Spec', desc: 'Design database schemas, entity relationships, and endpoint contracts.' },
+      { step: '02', title: 'API Engineering', desc: 'Develop controllers, routes, middleware, and secure authentication flows.' },
+      { step: '03', title: 'Validation & Tests', desc: 'Implement schema validation, rate-limiting, and error-handling tests.' },
+      { step: '04', title: 'Deploy & Optimize', desc: 'Deploy to cloud runtime, index queries, and verify production latency.' }
     ],
-    techStack: ['Swift 5.10+', 'SwiftUI', 'Xcode', 'Combine', 'SwiftData', 'Firebase iOS SDK'],
-    idealFor: 'Mobile Startups, Consumer Apps, Lifestyle Products, Utility Tools'
+    techStack: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'REST APIs', 'JWT / OAuth', 'Postman'],
+    idealFor: 'Full-Stack Applications, SaaS Platforms, E-Commerce Portals, Startups'
   },
   {
     id: 'ui-ux',

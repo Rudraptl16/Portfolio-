@@ -19,9 +19,9 @@ export default function SEO({
   noIndex = false,
 }) {
   const defaultUrl = 'https://patelrudra.in';
-  const defaultTitle = 'Rudra Patel — Digital Architect | Frontend & iOS Developer';
-  const defaultDesc = 'Official Portfolio of Rudra Patel — Digital Architect, Frontend Web Developer & Native iOS Developer based in Vadodara, Gujarat, India. Specializing in React, Next.js, SwiftUI, and fluid UI/UX design.';
-  const defaultKeywords = 'Rudra Patel, Digital Architect, Frontend Developer, iOS Developer, SwiftUI Developer, React Developer, Next.js, Swift, Tailwind CSS, Vadodara, Gujarat, India';
+  const defaultTitle = 'Rudra Patel — Full Stack Developer | Frontend & Backend';
+  const defaultDesc = 'Official Portfolio of Rudra Patel — Full Stack Developer (Frontend & Backend) based in Vadodara, Gujarat, India. Specializing in React, Next.js, Node.js, Express, MongoDB, and modern web architectures.';
+  const defaultKeywords = 'Rudra Patel, Full Stack Developer, Frontend Developer, Backend Developer, React Developer, Node.js, Express, MongoDB, Next.js, Tailwind CSS, Vadodara, Gujarat, India';
   const defaultImage = '/images/DSC06139.webp';
 
   const titleText = title

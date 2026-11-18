@@ -244,7 +244,7 @@ export default function Skills() {
           prefix="Technical "
           highlight="Engine & Stack"
           suffix=" for High-Impact Software"
-          description="Comprehensive spectrum of modern frontend ecosystems, native SwiftUI architectures, scalable backend services, and AI-accelerated workflows."
+          description="Comprehensive spectrum of modern frontend ecosystems, scalable backend microservices, robust database architectures, and AI-accelerated workflows."
           rightContent={
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}

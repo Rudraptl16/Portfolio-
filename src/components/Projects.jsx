@@ -13,7 +13,7 @@ import SectionHeading from './ui/SectionHeading';
 const categoryIcons = {
   'All': LayoutGrid,
   'Web Apps': Globe,
-  'Mobile Apps': Smartphone,
+  'Full-Stack': Layers,
   'UI/UX Design': Palette,
 };
 
@@ -112,7 +112,7 @@ export default function Projects() {
       const cat = (p.category || '').toLowerCase();
       const target = activeFilter.toLowerCase();
       if (target.includes('web')) return cat.includes('web') || cat.includes('react') || cat.includes('javascript') || cat.includes('html');
-      if (target.includes('mobile')) return cat.includes('mobile') || cat.includes('ios') || cat.includes('swift');
+      if (target.includes('full-stack') || target.includes('fullstack')) return cat.includes('full-stack') || cat.includes('fullstack') || cat.includes('backend') || cat.includes('api');
       if (target.includes('design')) return cat.includes('design') || cat.includes('ui') || cat.includes('figma');
       return cat === target;
     });
@@ -136,7 +136,7 @@ export default function Projects() {
           prefix="Featured "
           highlight="Artifacts"
           suffix=" & Production Works"
-          description="Curated collection of native iOS mobile architectures, responsive full-stack web platforms, and spatial design systems engineered with extreme performance and fluid ergonomics."
+          description="Curated collection of scalable full-stack web platforms, responsive frontend systems, and high-performance backend architectures engineered with extreme speed and fluid ergonomics."
           size="medium"
           rightContent={
             <motion.div
@@ -170,7 +170,7 @@ export default function Projects() {
                   const cat = (p.category || '').toLowerCase();
                   const target = filter.toLowerCase();
                   if (target.includes('web')) return cat.includes('web') || cat.includes('react') || cat.includes('javascript') || cat.includes('html');
-                  if (target.includes('mobile')) return cat.includes('mobile') || cat.includes('ios') || cat.includes('swift');
+                  if (target.includes('full-stack') || target.includes('fullstack')) return cat.includes('full-stack') || cat.includes('fullstack') || cat.includes('backend') || cat.includes('api');
                   if (target.includes('design')) return cat.includes('design') || cat.includes('ui') || cat.includes('figma');
                   return cat === target;
                 }).length;

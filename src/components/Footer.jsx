@@ -111,7 +111,7 @@ export default function Footer() {
                 <h3 className="text-xl sm:text-2xl font-display font-bold tracking-tight text-dark-textMain">
                   Rudra Patel<span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400 ml-0.5">.</span>
                 </h3>
-                <p className="text-[12px] font-poppins text-purple-600 dark:text-purple-400 tracking-[0.2em] font-semibold mt-0.5 sm:mt-1">Frontend & iOS Developer</p>
+                <p className="text-[12px] font-poppins text-purple-600 dark:text-purple-400 tracking-[0.2em] font-semibold mt-0.5 sm:mt-1">Full Stack Developer</p>
               </div>
             </div>
 
@@ -190,9 +190,9 @@ export default function Footer() {
             <ul className="space-y-3 sm:space-y-3.5 text-dark-textMuted font-medium text-xs sm:text-sm font-display">
               {[
                 'Frontend Web Development',
-                'Native iOS App Development',
-                'UI/UX & Design-to-Code',
-                'API & Cloud Integration',
+                'Backend & RESTful APIs',
+                'Full-Stack Architecture',
+                'UI/UX & Design Systems',
               ].map((service, index) => (
                 <li key={index} className="flex items-center gap-2.5 group">
                   <span className="w-1.5 h-1.5 rounded-full bg-purple-500 group-hover:bg-indigo-400 transition-colors duration-300" />

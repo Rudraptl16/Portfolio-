@@ -119,7 +119,7 @@ export default function About() {
           prefix="Crafting Digital "
           highlight="Gold"
           suffix=" from Lines of Code"
-          description="Translating architectural visions into pixel-perfect, high-performance web platforms and fluid native iOS applications with extreme attention to detail."
+          description="Translating architectural visions into pixel-perfect, high-performance web platforms and scalable full-stack applications with extreme attention to detail."
         />
 
         {/* Bento Grid Layout */}
@@ -138,30 +138,30 @@ export default function About() {
                   <div className="p-2 sm:p-2.5 rounded-md text-indigo-600 dark:text-indigo-400">
                     <User size={18} className="sm:w-5 sm:h-5" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-display font-bold text-dark-textMain">Frontend & iOS Developer</h3>
+                  <h3 className="text-xl sm:text-2xl font-display font-bold text-dark-textMain">Full Stack Developer</h3>
                 </div>
               </div>
 
               <div className="space-y-3 sm:space-y-4 text-dark-textMain/75 my-auto">
                 <p className="text-dark-textMuted leading-relaxed font-bricolage text-xs sm:text-sm md:text-base opacity-95">
-                  I'm <span className="text-dark-textMain font-bold">Rudra Patel</span>, a dedicated <span className="text-dark-textMain font-semibold">Frontend Web & Native iOS Developer</span> based in Vadodara, Gujarat, India. I specialize in designing and engineering high-speed, SEO-optimized web applications and native iOS mobile experiences.
+                  I'm <span className="text-dark-textMain font-bold">Rudra Patel</span>, a dedicated <span className="text-dark-textMain font-semibold">Full Stack Developer (Frontend & Backend)</span> based in Vadodara, Gujarat, India. I specialize in designing and engineering high-speed, SEO-optimized web applications and scalable backend APIs.
                 </p>
                 <p className="text-dark-textMuted leading-relaxed font-bricolage text-xs sm:text-sm md:text-base opacity-95">
-                  My primary focus combines <span className="text-indigo-600 dark:text-indigo-500 font-semibold">Frontend Web Development (React, Next.js, Tailwind CSS)</span> and <span className="text-purple-600 dark:text-purple-500 font-semibold">iOS App Development (SwiftUI, Apple SDKs, Firebase)</span>. I build pixel-perfect user interfaces, fluid animations, and fast-loading web and mobile applications.
+                  My primary focus combines <span className="text-indigo-600 dark:text-indigo-500 font-semibold">Frontend Web Engineering (React, Next.js, Tailwind CSS)</span> and <span className="text-purple-600 dark:text-purple-500 font-semibold">Backend Architecture (Node.js, Express, MongoDB, RESTful APIs)</span>. I build pixel-perfect user interfaces, fluid animations, and robust, secure server pipelines.
                 </p>
                 <p className="text-dark-textMuted leading-relaxed font-bricolage text-xs sm:text-sm md:text-base opacity-95">
-                  Whether creating responsive web platforms or native iOS applications, I bridge intuitive UI/UX design with clean, scalable code architecture — delivering digital products that are visually engaging and built for maximum performance.
+                  Whether creating responsive web platforms or architecting cloud databases, I bridge intuitive UI/UX design with clean, scalable code architecture — delivering digital products that are visually engaging and built for maximum performance.
                 </p>
                 <div className="pt-2 flex flex-wrap items-center gap-2 text-xs sm:text-sm font-display text-dark-textMuted">
-                  <span className="px-2.5 py-1 text-indigo-600 dark:text-indigo-400 font-bold">● Web & Mobile</span>
+                  <span className="px-2.5 py-1 text-indigo-600 dark:text-indigo-400 font-bold">● Frontend & Backend</span>
                   <span className="px-2.5 py-1 text-purple-600 dark:text-purple-400 font-bold">● High Performance</span>
-                  <span className="px-2.5 py-1 text-pink-600 dark:text-pink-400 font-bold">● Pixel Perfect</span>
+                  <span className="px-2.5 py-1 text-pink-600 dark:text-pink-400 font-bold">● Scalable APIs</span>
                 </div>
               </div>
 
               <div className="pt-2 sm:pt-3 border-t border-dark-border">
                 <p className="font-medium font-display text-xs sm:text-sm md:text-base leading-relaxed text-indigo-600 dark:text-indigo-400">
-                  Crafting responsive web applications and native iOS apps with modern design and high performance.
+                  Crafting responsive web applications and full-stack systems with modern design and high performance.
                 </p>
               </div>
             </div>
@@ -238,13 +238,13 @@ export default function About() {
                   <Code2 size={18} /> Tech Philosophy
                 </h4>
                 <p className="text-xs md:text-sm text-dark-textMuted font-bricolage leading-relaxed">
-                  Engineering native iOS applications with SwiftUI & Xcode alongside high-performance web platforms with React & Next.js. Driven by pixel perfection, fluid micro-interactions, and responsive design.
+                  Engineering full-stack web applications with React, Next.js, Node.js, Express, and MongoDB. Driven by clean architecture, high API throughput, pixel perfection, and intuitive user experiences.
                 </p>
               </div>
 
               <div className="flex flex-col gap-3 w-full sm:w-auto shrink-0">
                 <div className="flex flex-wrap gap-1.5 max-w-[380px]">
-                  {['SwiftUI', 'Swift', 'React', 'Next.js', 'TypeScript', 'Tailwind', 'Xcode', 'Firebase'].map(tech => (
+                  {['React', 'Next.js', 'Node.js', 'Express', 'MongoDB', 'JavaScript', 'TypeScript', 'Tailwind', 'REST APIs', 'Git'].map(tech => (
                     <span
                       key={tech}
                       className="px-2.5 py-1 text-[10px] font-code font-bold uppercase tracking-wider bg-dark-textMain/5 border border-dark-border rounded-lg text-dark-textMuted hover:text-[#6366f1] hover:border-[#6366f1]/30 hover:bg-[#6366f1]/5 transition-all duration-300 cursor-default"

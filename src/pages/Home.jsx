@@ -15,19 +15,19 @@ const homeSchema = {
       "@type": "Person",
       "@id": "https://patelrudra.in/#person",
       "name": "Rudra Patel",
-      "alternateName": ["Rudra Patel Vadodara", "Rudra Patel iOS Developer", "Rudra Patel Frontend Developer"],
+      "alternateName": ["Rudra Patel Vadodara", "Rudra Patel Full Stack Developer", "Rudra Patel Frontend Developer", "Rudra Patel Backend Developer"],
       "url": "https://patelrudra.in",
       "image": {
         "@type": "ImageObject",
         "@id": "https://patelrudra.in/#primaryimage",
         "url": "https://patelrudra.in/images/0R7A7692.webp",
         "contentUrl": "https://patelrudra.in/images/0R7A7692.webp",
-        "caption": "Rudra Patel - Digital Architect, Frontend & iOS Developer"
+        "caption": "Rudra Patel - Full Stack Developer (Frontend & Backend)"
       },
-      "jobTitle": "Digital Architect, Frontend & iOS Developer",
+      "jobTitle": "Full Stack Developer (Frontend & Backend)",
       "worksFor": {
         "@type": "Organization",
-        "name": "Independent Digital Architect"
+        "name": "Independent Full Stack Engineer"
       },
       "address": {
         "@type": "PostalAddress",
@@ -43,12 +43,15 @@ const homeSchema = {
         "https://www.youtube.com/@rudrapatel4172"
       ],
       "knowsAbout": [
-        "Frontend Web Development",
-        "iOS Mobile App Development",
+        "Full Stack Web Development",
+        "Frontend Web Engineering",
+        "Backend Architecture",
         "React",
         "Next.js",
-        "Swift",
-        "SwiftUI",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "REST APIs",
         "Tailwind CSS",
         "JavaScript",
         "TypeScript",
@@ -59,8 +62,8 @@ const homeSchema = {
       "@type": "WebSite",
       "@id": "https://patelrudra.in/#website",
       "url": "https://patelrudra.in",
-      "name": "Rudra Patel | Digital Architect, Frontend & iOS Developer",
-      "description": "Portfolio of Rudra Patel, a Digital Architect specializing in Frontend Web Development (React/Next.js) and Native iOS Apps (SwiftUI) in Vadodara, Gujarat, India.",
+      "name": "Rudra Patel | Full Stack Developer (Frontend & Backend)",
+      "description": "Portfolio of Rudra Patel, a Full Stack Developer specializing in Frontend Web Development (React/Next.js) and Backend Architecture (Node.js/Express/MongoDB) in Vadodara, Gujarat, India.",
       "publisher": {
         "@id": "https://patelrudra.in/#person"
       },
@@ -90,11 +93,11 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Rudra Patel - Digital Architect | Frontend & iOS Developer"
-        description="Official Portfolio of Rudra Patel — Digital Architect, Frontend Web Developer & Native iOS Developer based in Vadodara, Gujarat, India. Engineering high-performance React/Next.js web platforms and native SwiftUI mobile apps."
-        keywords="Rudra Patel, Digital Architect, Frontend Developer Vadodara, iOS Developer Gujarat, React developer India, Swift developer Vadodara, SwiftUI developer, Next.js developer India, UI/UX design, mobile app developer Vadodara"
-        ogTitle="Rudra Patel — Digital Architect | Frontend & iOS Developer"
-        ogDescription="Frontend web engineering and native iOS application development based in Vadodara, Gujarat, India."
+        title="Rudra Patel - Full Stack Developer | Frontend & Backend"
+        description="Official Portfolio of Rudra Patel — Full Stack Developer (Frontend & Backend) based in Vadodara, Gujarat, India. Engineering high-performance React/Next.js web platforms, scalable Node.js/Express APIs, and modern cloud architectures."
+        keywords="Rudra Patel, Full Stack Developer, Frontend Developer Vadodara, Backend Developer Gujarat, React developer India, Node.js developer, Express.js developer, MongoDB, Next.js developer India, UI/UX design, Web developer Vadodara"
+        ogTitle="Rudra Patel — Full Stack Developer | Frontend & Backend"
+        ogDescription="Full Stack Web Engineering (Frontend & Backend) based in Vadodara, Gujarat, India."
         ogImage="/images/navbar-avatar.webp"
         canonical="https://patelrudra.in/"
         schema={homeSchema}

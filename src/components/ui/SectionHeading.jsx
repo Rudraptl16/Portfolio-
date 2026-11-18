@@ -37,7 +37,7 @@ export default function SectionHeading({
   as: Component = 'h2', // 'h2' | 'h1' | 'h3'
   className = '',
   rightContent = null,
-  showSparkles = true,
+  _showSparkles = true,
   size = 'default', // 'default' | 'large'
 }) {
   const isCentered = align === 'center';
@@ -65,15 +65,15 @@ export default function SectionHeading({
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              className={`inline-flex items-center gap-2.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full mb-3.5 sm:mb-4 bg-indigo-50/90 dark:bg-indigo-500/10 border border-indigo-200/80 dark:border-indigo-500/20 backdrop-blur-md shadow-sm dark:shadow-none`}
+              className={`inline-flex items-center gap-2.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full mb-3.5 sm:mb-4 bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-300 dark:border-indigo-500/30 backdrop-blur-md shadow-sm dark:shadow-[0_0_16px_rgba(99,102,241,0.15)]`}
             >
               {BadgeIcon && (
                 <BadgeIcon
                   size={15}
-                  className="text-indigo-600 dark:text-indigo-600 transition-transform duration-300 group-hover/badge:scale-110"
+                  className="text-indigo-600 dark:text-indigo-400 transition-transform duration-300 group-hover/badge:scale-110"
                 />
               )}
-              <span className="font-mono text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase text-indigo-800 dark:text-indigo-600">
+              <span className="font-mono text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase text-indigo-700 dark:text-indigo-300">
                 {badge}
               </span>
             </motion.div>

@@ -72,11 +72,11 @@ export default function ProjectsPage() {
   const stats = useMemo(() => {
     const total = projects.length;
     const webApps = projects.filter((p) => (p.category || '').toLowerCase().includes('web')).length;
-    const mobileApps = projects.filter((p) => (p.category || '').toLowerCase().includes('mobile')).length;
+    const fullStack = projects.filter((p) => (p.category || '').toLowerCase().includes('full-stack') || (p.category || '').toLowerCase().includes('fullstack') || (p.category || '').toLowerCase().includes('backend')).length;
     const uiUx = projects.filter((p) => (p.category || '').toLowerCase().includes('design') || (p.category || '').toLowerCase().includes('ui')).length;
     const liveDemos = projects.filter((p) => p.liveUrl && p.liveUrl !== '#').length;
 
-    return { total, webApps, mobileApps, uiUx, liveDemos };
+    return { total, webApps, fullStack, uiUx, liveDemos };
   }, []);
 
   // Filter projects based on Search, Category, and Tech Stack filters
@@ -89,7 +89,7 @@ export default function ProjectsPage() {
       let matchesCategory = activeCategory === 'All';
       if (!matchesCategory) {
         if (targetCat.includes('web')) matchesCategory = cat.includes('web') || cat.includes('react') || cat.includes('javascript') || cat.includes('html');
-        else if (targetCat.includes('mobile')) matchesCategory = cat.includes('mobile') || cat.includes('ios') || cat.includes('swift');
+        else if (targetCat.includes('full-stack') || targetCat.includes('fullstack')) matchesCategory = cat.includes('full-stack') || cat.includes('fullstack') || cat.includes('backend') || cat.includes('api');
         else if (targetCat.includes('design')) matchesCategory = cat.includes('design') || cat.includes('ui') || cat.includes('figma');
         else matchesCategory = cat === targetCat;
       }
@@ -160,7 +160,7 @@ export default function ProjectsPage() {
         '@type': 'CollectionPage',
         'name': 'Project Showcase & Software Vault | Rudra Patel',
         'url': 'https://patelrudra.in/projects',
-        'description': 'Interactive exhibition of full-stack web applications, native iOS apps, and UI/UX design engineering by Rudra Patel.',
+        'description': 'Interactive exhibition of full-stack web applications, frontend architectures, and UI/UX design engineering by Rudra Patel.',
         'author': {
           '@type': 'Person',
           'name': 'Rudra Patel',
@@ -174,8 +174,8 @@ export default function ProjectsPage() {
     <div className="min-h-screen bg-dark-bg text-dark-textMain pt-28 md:pt-36 pb-24 relative overflow-hidden">
       <SEO
         title="Project Showcase & Technical Vault"
-        description="Interactive exhibition of Frontend web applications, native SwiftUI iOS apps, and UI/UX design systems engineered by Rudra Patel."
-        keywords="Rudra Patel projects, software showcase, web apps portfolio, SwiftUI iOS apps, React projects, Next.js applications, Frontend portfolio, iOS developer projects"
+        description="Interactive exhibition of Frontend web applications, full-stack platforms, and UI/UX design systems engineered by Rudra Patel."
+        keywords="Rudra Patel projects, software showcase, web apps portfolio, Full-Stack applications, React projects, Next.js applications, Frontend portfolio, Backend developer projects"
         canonical="https://patelrudra.in/projects"
         schema={projectsSchema}
       />
@@ -228,7 +228,7 @@ export default function ProjectsPage() {
             prefix="Project "
             highlight="Showcase"
             suffix=" & Technical Vault"
-            description="An interactive catalog of production web applications, high-performance iOS apps, and UI/UX design systems built with scalable architecture and modern engineering standards."
+            description="An interactive catalog of production web applications, high-performance full-stack architectures, and UI/UX design systems built with scalable engineering standards."
             rightContent={
               <motion.div
                 variants={{
@@ -273,7 +273,7 @@ export default function ProjectsPage() {
             {[
               { label: 'Total Projects', value: stats.total, icon: Layers, color: 'text-purple-500 border-purple-500/30 bg-purple-500/10' },
               { label: 'Web Applications', value: stats.webApps, icon: Globe, color: 'text-indigo-500 border-indigo-500/30 bg-indigo-500/10' },
-              { label: 'Mobile & iOS Apps', value: stats.mobileApps, icon: Smartphone, color: 'text-purple-400 border-purple-500/30 bg-purple-500/10' },
+              { label: 'Full-Stack Apps', value: stats.fullStack, icon: Layers, color: 'text-purple-400 border-purple-500/30 bg-purple-500/10' },
               { label: 'UI/UX Systems', value: stats.uiUx, icon: Palette, color: 'text-pink-400 border-pink-500/30 bg-pink-500/10' },
               { label: 'Live Deployments', value: stats.liveDemos, icon: Zap, color: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/10' },
             ].map((stat, idx) => {
@@ -317,7 +317,7 @@ export default function ProjectsPage() {
                     const c = (p.category || '').toLowerCase();
                     const t = cat.toLowerCase();
                     if (t.includes('web')) return c.includes('web') || c.includes('react') || c.includes('javascript') || c.includes('html');
-                    if (t.includes('mobile')) return c.includes('mobile') || c.includes('ios') || c.includes('swift');
+                    if (t.includes('full-stack') || t.includes('fullstack')) return c.includes('full-stack') || c.includes('fullstack') || c.includes('backend') || c.includes('api');
                     if (t.includes('design')) return c.includes('design') || c.includes('ui') || c.includes('figma');
                     return c === t;
                   }).length;
@@ -424,7 +424,7 @@ export default function ProjectsPage() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             <AnimatePresence mode="popLayout">
-              {filteredProjects.map((project, idx) => {
+              {filteredProjects.map((project) => {
                 return (
                   <motion.div
                     key={project.id}
@@ -503,7 +503,7 @@ export default function ProjectsPage() {
             className="space-y-6"
           >
             <AnimatePresence mode="popLayout">
-              {filteredProjects.map((project, idx) => {
+              {filteredProjects.map((project) => {
                 const hasCaseStudy = caseStudyIds.has(project.id);
                 return (
                   <motion.div
@@ -633,7 +633,7 @@ export default function ProjectsPage() {
           </h2>
 
           <p className="text-dark-textMain/60 text-sm sm:text-base max-w-lg mx-auto font-light leading-relaxed">
-            From high-performance React web applications to native SwiftUI iOS apps, I engineer modern digital experiences focused on performance and usability.
+            From high-performance React web applications to scalable full-stack backend platforms, I engineer modern digital experiences focused on performance and usability.
           </p>
 
           <div className="pt-2 flex justify-center">
